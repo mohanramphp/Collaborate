@@ -1,0 +1,33 @@
+<view title="'Direct Reports'">
+
+    <content has-header="true">
+		<div class="list card" ng-repeat="employee in employees" type="item-text-wrap">
+			<div class="item item-avatar">
+				<img ng-src="pics/{{employee.pic}}">
+				<h2>{{employee.firstName}} {{employee.lastName}}</h2>
+				<p>{{employee.title}}</p>
+			</div>
+			<div class="item item-body">
+				<img class="full-image" ng-src="pics/{{employee.pic}}">
+				<p>
+				 Hey, I am good...
+				</p>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					
+					<a class="tab-item" href="mailto:{{employee.email}}">
+					<i class="icon ion-android-mail"></i>
+					Email
+					</a>
+					<a class="tab-item" href="sms:{{employee.cellPhone}}">
+					<i class="icon ion-android-forums"></i>
+					Message
+					</a>
+					<a class="tab-item" href="tel:{{employee.cellPhone}}">
+					<i class="icon ion-android-call"></i>
+					Call
+					</a>
+				</div>
+			</div>
+		</div>
+    </content>
+</view>
